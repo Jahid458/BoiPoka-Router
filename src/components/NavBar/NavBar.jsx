@@ -1,8 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function NavBar() {
   const links= <>
-          <li><a>Home</a></li>
+          <li><NavLink to="/">Home</NavLink></li>
           <li><a>Item 3</a></li>
   </>
   return (
