@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 
 const getStoreReadList = () =>{
   //readlist
@@ -29,7 +30,8 @@ const addToStoreReadList = (id) =>{
   const storedList = getStoreReadList();
   if(storedList.includes(id)){
     //already exits
-    console.log(id,'already exits in the read list!')
+      //triger toast from componet 
+      toast('Books is added to your read list.')
   }
   else{
     storedList.push(id)
@@ -47,7 +49,8 @@ const addToStoreWishList = (id) =>{
   else{
     storedWishList.push(id)
     const storedWishListStr = JSON.stringify(storedWishList)
-    localStorage.setItem('wish-list', storedWishListStr)
+    localStorage.setItem('wish-list', storedWishListStr);
+ 
   }
 
 }
